@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 .main {
   align-items: center;
   font-family: "Poppins", sans-serif;
@@ -14,21 +17,12 @@
   .main {
     flex-direction: column;
   }
-  #project_section {
-    flex: 1;
-  }
-  .project_card {
-    min-width: 100vw;
-  }
-  .project_card {
-    flex-direction: column;
-  }
 }
 #profile_section {
   width: 100%;
   height: 100vh;
-
-  background-image: url("./image/bg1.jpg");
+  position: relative;
+  background-image: url("./image/155.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +86,7 @@
   font-size: 1rem;
   font-weight: 400;
   color: white;
-  background-color: skyblue;
+  background-color: yellowgreen;
   cursor: pointer;
 }
 
@@ -147,6 +141,78 @@ img {
 }
 .caption p {
   color: gray;
+}
+
+/* ////////////////////////// */
+.scrollDown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scrollDown__wheel {
+  height: 42px;
+  width: 24px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.scrollDown__wheel--inner {
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  animation: movingwheel 0.5s linear infinite;
+}
+@keyframes movingwheel {
+  0% {
+    top: 1px;
+  }
+  25% {
+    top: 2px;
+  }
+  50% {
+    top: 3px;
+  }
+  75% {
+    top: 2px;
+  }
+  100% {
+    top: 1px;
+  }
+}
+.scrollDown__arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scrollDown__arrow {
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  animation: scrollAnim 1s infinite;
+  animation-direction: alternate;
+}
+.scrollDown:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.scrollDown:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -215,4 +281,100 @@ img {
   100% {
     transform: translate3d(-50%, 0, 0);
   }
+}
+
+/* //////////////////////////////////////// */
+#project_section {
+  background-image: linear-gradient(to bottom, aqua, yellow);
+  padding: 3rem 0;
+}
+#project_section h2 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.5rem;
+}
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 80%;
+  margin: 0 auto;
+  gap: 10px;
+}
+@media (max-width: 450px) {
+  .projects {
+    width: 100%;
+  }
+}
+.project_card {
+}
+.card_body {
+  padding: 2rem 1.5rem;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+.card_img {
+  flex: 2;
+
+  width: 100%;
+  background-image: url("./image/bg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+.card_text {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.card_text h3 {
+  margin-top: 10px;
+}
+.card_text p {
+  font-size: 12px;
+  color: gray;
+}
+.card_text a {
+  width: 80%;
+  background-color: #2196f3;
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 5px 0;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+/* //////////////////////////////////////// */
+.card1 {
+  background-image: url("./image/Login.png");
+}
+.card2 {
+  background-image: url("./image/naturs.PNG");
+}
+.card3 {
+  background-image: url("./image/recipe_search.PNG");
+}
+.card4 {
+  background-image: url("./image/three_js.PNG");
+}
+.card5 {
+  background-image: url("./image/t_chana.PNG");
+}
+.card6 {
+  background-image: url("./image/kanban.PNG");
+}
+
+.card7 {
+  background-image: url("./image/e-com.PNG");
 }
