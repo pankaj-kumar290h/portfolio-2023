@@ -26,8 +26,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  
 
   display: flex;
   flex-direction: column;
@@ -35,16 +33,14 @@ a {
   justify-content: center;
 }
 
-.video{
+.video {
   position: absolute;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   left: 0;
   object-fit: cover;
-  filter: blur(5px)
-  
-
+  filter: blur(5px);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
@@ -398,4 +394,7 @@ img {
 }
 .card9 {
   background-image: url("./image/photosapp.PNG");
+}
+.card10 {
+  background-image: url("./image/cryptoimg.PNG");
 }
