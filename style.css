@@ -17,6 +17,9 @@ a {
   .main {
     flex-direction: column;
   }
+  #profile_section {
+    min-height: 118vh;
+  }
 }
 #profile_section {
   width: 100%;
@@ -397,4 +400,7 @@ img {
 }
 .card10 {
   background-image: url("./image/cryptoimg.PNG");
+}
+.card11 {
+  background-image: url("./image/bottel.png");
 }
